@@ -2,7 +2,7 @@ let Sequelize = require("sequelize");
 
 let sequelize = require("../config/connection");
 
-let Items = sequelize.define("items", {
+let Items = sequelize.define("item", {
   item_name: {
     type: Sequelize.STRING,
     allowNull: false
