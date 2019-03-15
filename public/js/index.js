@@ -1,3 +1,36 @@
+$("button").on("click", function(e) {
+  e.preventDefault();
+  var newItem = {
+    itemName: $("#name")
+      .val()
+      .trim(),
+    category: $("#category")
+      .val()
+      .trim(),
+    expirationDate: $("#expirationdate")
+      .val()
+      .trim(),
+    warrantyValid: $("#warrantyvalid")
+      .val()
+      .trim(),
+    phoneNumber: $("#phonenumber")
+      .val()
+      .trim(),
+    note: $("#note")
+      .val()
+      .trim()
+  };
+
+  console.log(newItem);
+
+  // Clear the form field
+  $("#name").val("");
+  $("#categories").val("");
+  $("#barcode").val("");
+  $("#renewal-price").val("");
+  $("#date").val("");
+});
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
