@@ -132,3 +132,71 @@ body {
   border: double;
   font-family: 'Rancho', cursive;
 }
+
+
+/* Team Photo Galary */
+
+.team-info{
+    
+  font-family: 'Tangerine', serif;
+  font-size: 16px;
+  text-shadow: 4px 4px 4px #aaa;
+  padding-top:10px;
+  margin-bottom:10px
+
+}
+.member-images{ 
+width:200px;
+height:250px;
+border-radius:50%;
+
+}
+
+.media{
+padding:10px;
+text-align:center;
+margin-top:10px;
+}
+.social-media{
+background-color: #405365;
+}
+
+.hidden{
+display: none;
+}
+
+.container:hover .visible {
+display: none;
+}
+
+.container:hover .hidden {
+display: block;
+}
+
+.bios {
+width: 20%;
+display: grid;
+justify-content: center;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+.member-images {
+ display: none;
+}
+}
+@media (min-width:769px) and (max-width: 992px) {
+.member-images {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+}
+
+@media (min-width: 993px) and (max-width: 1600px) {
+.member-images {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+}
+
