@@ -21,11 +21,11 @@ let Items = sequelize.define("item", {
     type: Sequelize.BOOLEAN,
     allowNull: false,
     defaultValue: true
-  }
+  },
 });
 
 Items.sync();
-modules.exports = Items;
+module.exports = Items;
 
 
 
