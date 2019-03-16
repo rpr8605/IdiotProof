@@ -9,7 +9,7 @@ var db = require("./models");
 let routes = require("./routes/apiRoutes");
 let htmlRouter = require("./routes/htmlRoutes");
 
-
+var htmlRouter = require("./routes/htmlRoutes");
 
 
 //+16602102135

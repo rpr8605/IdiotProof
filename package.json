@@ -1,5 +1,5 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "handlebars-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
@@ -29,5 +29,17 @@
     "mocha": "^5.2.0",
     "nodemon": "^1.18.10",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TAADAO/IdiotProof.git"
+  },
+  "author": "Hamilton Saxion",
+  "bugs": {
+    "url": "https://github.com/TAADAO/IdiotProof/issues"
+  },
+  "homepage": "https://github.com/TAADAO/IdiotProof#readme"
 }
