@@ -61,9 +61,10 @@
                   <th>ID</th>
                   <th>Name</th>
                   <th>Categories</th>
-                  <th>Barcode #</th>
-                  <th>Renewal Price</th>
-                  <th>Expiration date</th>
+                  <th>Expiration Date</th>
+                  <th>Warranty Valid</th>
+                  <th>Phone Number</th>
+                  <th>Note</th>
                   <!-- Button to pop out modal form -->
                   <th><a href="#" class="btn btn-default btn-rounded bg-primary text-white" data-toggle="modal"
                       data-target="#modalContactForm">+</a></th>
@@ -71,12 +72,13 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
+                  <td>{{title}}</td>
                   <td>Samsung TV</td>
                   <td>Electronics</td>
                   <td>98878GF7260K489F</td>
                   <td>$250</td>
                   <td>12/03/2022</td>
+                  <td>{{note}}</td>
                   <td><input type="button" value="X"></td>
                 </tr>
 
@@ -107,17 +109,20 @@ $("button").on("click", function(e) {
     note: $("#note")
       .val()
       .trim()
-  };
-
-  console.log(newItem);
+   $.post('/api/items', newItem, data=>{
+     console.log('data posted')
+     })
 
   // Clear the form field
   $("#name").val("");
-  $("#categories").val("");
-  $("#barcode").val("");
-  $("#renewal-price").val("");
-  $("#date").val("");
+  $("#category").val("");
+  $("#expirationdate").val("");
+  $("#warrantyvalid").val("");
+  $("#phonenumber").val("");
+  $("#note").val("");
 });
+
+
 
 </script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
