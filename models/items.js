@@ -22,6 +22,9 @@ let Items = sequelize.define("item", {
     allowNull: false,
     defaultValue: true
   },
+  phone_number: {
+    type: Sequelize.BIGINT
+  }
 });
 
 Items.sync();
