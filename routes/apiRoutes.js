@@ -1,14 +1,10 @@
 let express = require("express");
-
 let router = express.Router();
-
-
-
-let Items = require("../models/items");
+let db = require("../models");
 
 
 router.get("/items", (req, res) => {
-  Items.findAll({}).then(results => {
+  db.Items.findAll({}).then(results => {
     console.log("Hey there");
     res.json(results);
   })
@@ -18,7 +14,7 @@ router.get("/items", (req, res) => {
 router.post("/items", (req, res) => {
   let newItem = req.body;
 
-  Items.create(newItem).then(Items => {
+  db.Items.create(newItem).then(Items => {
     console.log(Items);
     res.json(Items);
   }).catch(error => {
@@ -28,11 +24,10 @@ router.post("/items", (req, res) => {
 
 });
 
-router.put("/items", (req, res) => {
-  res.send("You have hit the put route.")
-  Items.update(req.body, {
+router.put("/items/:id", (req, res) => {
+  db.Items.update(req.body, {
     where: {
-      id: req.body.id
+      id: req.params.id
     }
   }).then(results => {
     res.json(results);
@@ -40,7 +35,7 @@ router.put("/items", (req, res) => {
 });
 
 router.delete("/items", (req, res) => {
-  Items.destroy({
+  db.Items.destroy({
     where: {
       id: req.params.id
     }

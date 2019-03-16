@@ -1,35 +1,29 @@
-let Sequelize = require("sequelize");
-
-let sequelize = require("../config/connection");
-
-let Items = sequelize.define("item", {
-  item_name: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  category: {
-    type: Sequelize.STRING
-  },
-  expiration_date: {
-    type: Sequelize.DATEONLY,
-    allowNull: false
-  },
-  notes: {
-    type: Sequelize.TEXT
-  },
-  warranty_valid: {
-    type: Sequelize.BOOLEAN,
-    allowNull: false,
-    defaultValue: true
-  },
-  phone_number: {
-    type: Sequelize.BIGINT
-  }
-});
-
-Items.sync();
-module.exports = Items;
-
-
+module.exports = function (sequelize, DataTypes) {
+  let Items = sequelize.define("Items", {
+    item_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    category: {
+      type: DataTypes.STRING
+    },
+    expiration_date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false
+    },
+    notes: {
+      type: DataTypes.TEXT
+    },
+    warranty_valid: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true
+    },
+    phone_number: {
+      type: DataTypes.BIGINT
+    }
+  });
+  return Items;
+}
 
 
