@@ -4,9 +4,10 @@ var path = require('path');
 var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 8080;
 var bodyParser = require("body-parser");
-
+var db = require("./models");
 
 let routes = require("./routes/apiRoutes");
+let htmlRouter = require("./routes/htmlRoutes");
 
 
 
@@ -45,6 +46,8 @@ app.use('/', htmlRouter);
 
 
 
-app.listen(PORT, function () {
-  console.log("Server listening on: http://localhost:" + PORT);
+db.sequelize.sync().then(() => {
+  app.listen(PORT, function () {
+    console.log("Server listening on: http://localhost:" + PORT);
+  });
 });
