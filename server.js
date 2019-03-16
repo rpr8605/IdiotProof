@@ -8,7 +8,7 @@ var bodyParser = require("body-parser");
 
 let routes = require("./routes/apiRoutes");
 
-
+var htmlRouter = require("./routes/htmlRoutes");
 
 
 //+16602102135
