@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Idiot Proof</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+</head>
+<body>
+    <!-- Jumbotron  -->
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Idiot Proof!</h1>
+    </div>
+  </div>
+  <div id="innerBody"> 
+        <!-- About this website -->
+  <br>
+        <div id="infoBox">
+      <p>Welcome to Idiot Proof! Here you can store and track warranties. Select a time for us to remind you that your warranty is about to expire, even let us text you when it's getting close.</p>
+  </div>
+<br>
+
+<!-- Display table Soon to Expire -->
+
+<div id="shadowBox1">
+  <h3>Soon to Expire!</h3>
+  <div class="soonToExpire">
+    <div class="table">
+  <table data-toggle="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Expiration Date</th>
+        <th>Price</th>
+        <th>Notes</th>
+        <!-- Button to pop out modal form -->
+        <th><a href="" class="btn btn-default btn-rounded bg-primary text-white" data-toggle="modal" data-target="#modalContactForm">+</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Samsung TV</td>
+        <td>(817)946-6006</td>
+        <td>10/30/2018</td>
+        <td>$250</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae corporis dicta ab. Eos illum eligendi unde quasi, consectetur optio nemo autem minus dolores, ea porro veniam culpa! Fugiat, saepe reprehenderit!</td>
+        <td><input type="button" value="X"></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+<br>
+<hr>
+<br>
+<br>
+<!-- Display table Electronics -->
+<div id="shadowBox2">
+    <h3>Electronics</h3>
+    <div class="electronics">
+      <div class="table">
+    <table data-toggle="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Expiration Date</th>
+          <th>Price</th>
+          <th>Notes</th>
+          <!-- Button to pop out modal form -->
+          <th><a href="" class="btn btn-default btn-rounded bg-primary text-white" data-toggle="modal" data-target="#modalContactForm">+</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Samsung TV</td>
+          <td>(817)946-6006</td>
+          <td>10/30/2018</td>
+          <td>$250</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae corporis dicta ab. Eos illum eligendi unde quasi, consectetur optio nemo autem minus dolores, ea porro veniam culpa! Fugiat, saepe reprehenderit!</td>
+          <td><input type="button" value="X"></td>
+        </tr>
+  
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+
+<br>
+<br>
+<!-- Display table auto -->
+<div id="shadowBox3">
+    <h3>Auto</h3>
+    <div class="auto">
+      <div class="table">
+    <table data-toggle="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Expiration Date</th>
+          <th>Price</th>
+          <th>Notes</th>
+          <!-- Button to pop out modal form -->
+          <th><a href="" class="btn btn-default btn-rounded bg-primary text-white" data-toggle="modal" data-target="#modalContactForm">+</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>F-150</td>
+          <td>(817)946-6006</td>
+          <td>1/20/2022</td>
+          <td>$1000</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae corporis dicta ab. Eos illum eligendi unde quasi, consectetur optio nemo autem minus dolores, ea porro veniam culpa! Fugiat, saepe reprehenderit!</td>
+          <td><input type="button" value="X"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<br>
+    <br>
+    <br>
+    <!-- Display table Home -->
+    <div id="shadowBox4">
+        <h3>Home</h3>
+        <div class="home">
+          <div class="table">
+        <table data-toggle="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th>Expiration Date</th>
+              <th>Price</th>
+              <th>Notes</th>
+              <!-- Button to pop out modal form -->
+              <th><a href="" class="btn btn-default btn-rounded bg-primary text-white" data-toggle="modal" data-target="#modalContactForm">+</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Fridge Filter</td>
+              <td>(817)946-6006</td>
+              <td>1/20/2022</td>
+              <td>$75</td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae corporis dicta ab. Eos illum eligendi unde quasi, consectetur optio nemo autem minus dolores, ea porro veniam culpa! Fugiat, saepe reprehenderit!</td>
+              <td><input type="button" value="X"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+<br>
+<br>
+<!-- Display table Misc -->
+<div id="shadowBox5">
+    <h3>Miscellaneous</h3>
+    <div class="misc ">
+      <div class="table">
+    <table data-toggle="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Expiration Date</th>
+          <th>Price</th>
+          <th>Notes</th>
+          <!-- Button to pop out modal form -->
+          <th><a href="" class="btn btn-default btn-rounded bg-primary text-white" data-toggle="modal" data-target="#modalContactForm">+</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Note9</td>
+          <td>(817)946-6006</td>
+          <td>1/20/2022</td>
+          <td>$1200</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae corporis dicta ab. Eos illum eligendi unde quasi, consectetur optio nemo autem minus dolores, ea porro veniam culpa! Fugiat, saepe reprehenderit!</td>
+          <td><input type="button" value="X"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- Display table Auto -->
+
+<script>
+ $("button").on("click", (e)=>{
+       e.preventDefault()
+
+const newItem =  {
+itemName:$("#name").val().trim(),
+itemCategories:$("#categories").val().trim(),
+BarcodeNumber:$("#barcode").val().trim(),
+Renewal_Price:$("#renewal-price").val().trim(),
+Expiration_date:$("#date").val().trim()
+ }
+
+ console.log(newItem)
+
+ // Clear the form field
+ $("#name").val("")
+ $("#categories").val("")
+ $("#barcode").val("")
+ $("#renewal-price").val("")
+ $("#date").val("")
+
+})
+</script>
+
+
+</body>
+</html>
+
+
+  <!-- Modal Form -->
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header text-center">
+       <h4 class="modal-title w-100 font-weight-bold">Add New Item</h4>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body mx-3">
+       <div class="md-form mb-5">
+         <input type="text" id="name" class="form-control validate" placeholder="Name">
+         <label data-error="wrong" data-success="right" for="name"></label>
+       </div>
+
+       <div class="md-form mb-5">
+         <input type="email" id="categories" class="form-control validate" placeholder="Categories">
+         <label data-error="wrong" data-success="right" for="categories"> </label>
+       </div>
+
+       <div class="md-form mb-5">
+         <input type="text" id="barcode" class="form-control validate" placeholder="Barcode #">
+         <label data-error="wrong" data-success="right" for="barcode"></label>
+       </div>
+
+       <div class="md-form mb-5">
+           <input type="text" id="renewal-price" class="form-control validate" placeholder="Renewal Price">
+           <label data-error="wrong" data-success="right" for="renewal-price"></label>
+         </div>
+
+         <div class="md-form mb-5">
+             <input type="text" id="date" class="form-control validate" placeholder="Expiration date">
+             <label data-error="wrong" data-success="right" for="date"></label>
+           </div>
+     </div>
+     <div class="modal-footer d-flex justify-content-center">
+       <button class="btn btn-unique bg-primary">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+     </div>
+   </div>
+ </div>
+</div>
