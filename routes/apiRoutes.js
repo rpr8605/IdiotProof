@@ -1,58 +1,55 @@
+let express = require("express");
+let router = express.Router();
+let db = require("../models");
 
 
-let Items = require("../models/items");
+router.get("/items", (req, res) => {
+  db.Items.findAll({}).then(results => {
+    console.log("Hey there");
+    res.json(results);
+  })
+});
 
-module.exports = function (app) {
-  app.get("/api/all", function (req, res) { //uncertain if this should be /
-    Items.findAll({}).then(function (results) {
-      res.json(results);
-    });
-  });
 
-  app.get("/api/:id", function (req, res) {
-    if (req.params.id) {
-      Items.findAll({
-        where: {
-          id: req.params.id
-        }
-      }).then(function (results) {
-        res.json(results);
-      });
+router.post("/items", (req, res) => {
+  let newItem = req.body;
+
+  db.Items.create(newItem).then(Items => {
+    console.log(Items);
+    res.json(Items);
+  }).catch(error => {
+    console.log(error);
+    res.status(404).send(error);
+  })
+
+});
+
+router.put("/items/:id", (req, res) => {
+  db.Items.update(req.body, {
+    where: {
+      id: req.params.id
     }
-  });
+  }).then(results => {
+    res.json(results);
+  })
+});
 
-  app.post("/api/new", function (req, res) {
-    Items.create({
-      item_name: req.body.name,
-      category: req.body.category,
-      expiration_date: req.body.expiration_date,
-      notes: req.body.notes,
-      warranty_valid: req.body.warranty_valid
-    });
+router.delete("/items", (req, res) => {
+  db.Items.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function (results) {
+    res.json(results);
   });
+});
 
-  app.delete("/api/items/:id", function (req, res) {
-    Items.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function (results) {
-      res.json(results);
-    });
-  });
 
-  app.put("/api/update", function (req, res) {
-    Items.update(
-      req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      }).then(function (results) {
-        res.json(results);
-      });
-  });
-};
+module.exports = router;
+
+
+
+
 
 
 

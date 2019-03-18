@@ -1,0 +1,134 @@
+h1 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+}
+body {
+        background: url(images/backgroundPic.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: var(--color-text);
+        font-family: 'Russo One', sans-serif;
+        font-size: 32px;
+        letter-spacing: 0.05em;
+        font-weight: bolder;
+}
+.jumbotron {
+    opacity: 0.5;
+}
+#innerBody {
+    align-content: center;
+    margin-top:10px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    background-color: white;
+    opacity: 1;
+}
+#infoBox {
+    align-content: center;
+    margin: auto;
+    width: 90%;
+    font-weight: bold;
+    padding-top:7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    border: double;
+    margin-top: 15px;
+    background-color: white;
+    font-family: 'Rock Salt', cursive;
+
+}
+.soonToExpire {
+    width: 100%;
+    border: double;
+    font-size: 1rem;
+    background-color:white;
+    font-weight: bold;
+}
+.electronics {
+    width: 100%;
+    border: double;
+    font-size: 1rem;
+    background-color:white;
+    font-weight: bold;
+}
+.auto {
+    width: 100%;
+    border: double;
+    font-size: 1rem;
+    background-color:white;
+    font-weight: bold;
+}
+.home {
+    width: 100%;
+    border: double;
+    font-size: 1rem;
+    background-color:white;
+    font-weight: bold;
+}
+.misc {
+    width: 100%;
+    border: double;
+    font-size: 1rem;
+    background-color:white;
+    font-weight: bold;
+}
+#shadowBox1 {
+    margin-top:7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    background-color: red;
+    color: white;
+    box-shadow: black;
+    border: double;
+    font-family: 'Rancho', cursive;   
+}
+#shadowBox2 {
+    margin-top:7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    background-color: rgb(145, 145, 11);
+    color: white;
+    box-shadow: black;
+    border: double;
+    font-family: 'Rancho', cursive;
+}
+#shadowBox3 {
+    margin-top:7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    background-color: blue;
+    color: white;
+    box-shadow: black;
+    border: double;
+    font-family: 'Rancho', cursive;
+}
+#shadowBox4 {
+    margin-top:7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    background-color: green;
+    color: white;
+    box-shadow: black;
+    border: double;
+    font-family: 'Rancho', cursive;
+}
+#shadowBox5 {
+    margin-top:7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    background-color: orange;
+    color: white;
+    box-shadow: black;
+    border: double;
+    font-family: 'Rancho', cursive;
+}

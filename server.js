@@ -1,8 +1,15 @@
+// require dependencies
 var express = require("express");
+var path = require('path');
+var exphbs = require("express-handlebars");
+var PORT = process.env.PORT || 8080;
 var bodyParser = require("body-parser");
-const accountSid = 'ACb3cd2a2b23b182e38a3cafa530af2c63';
-const authToken = '93bbc9a970c9f088fbb437c91fb50766';
-const client = require('twilio')(accountSid, authToken);
+var db = require("./models");
+
+let routes = require("./routes/apiRoutes");
+let htmlRouter = require("./routes/htmlRoutes");
+
+var htmlRouter = require("./routes/htmlRoutes");
 
 
 //+16602102135
@@ -15,20 +22,32 @@ const client = require('twilio')(accountSid, authToken);
 // })
 // .then(message => console.log(message.sid));
 
+
 var app = express();
+
 
 var PORT = process.env.PORT || 8080;
 
 
-app.use(express.static("public"));
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(routes);
+
+//require("./routes/apiRoutes")(app);
+
+// Set Handlebars.
+app.set('views', path.join(__dirname, 'views'));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+app.use('/', htmlRouter);
 
 
 
-app.listen(PORT, function() {
+
+db.sequelize.sync().then(() => {
+  app.listen(PORT, function () {
     console.log("Server listening on: http://localhost:" + PORT);
   });
-  
+});
