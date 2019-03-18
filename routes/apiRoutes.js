@@ -4,7 +4,7 @@ let db = require("../models");
 
 
 router.get("/items", (req, res) => {
-  db.purchaseditems.findAll({}).then(results => {
+  db.purchasedItems.findAll({}).then(results => {
     console.log("Hey there");
     res.json(results);
   })
@@ -14,7 +14,7 @@ router.get("/items", (req, res) => {
 router.post("/items", (req, res) => {
   let newItem = req.body;
 
-  db.purchaseditems.create(newItem).then(purchaseditems_db => {
+  db.purchasedItems.create(newItem).then(purchasedItems_db => {
     console.log(newItem);
     res.json(newItem);
   }).catch(error => {
@@ -25,7 +25,7 @@ router.post("/items", (req, res) => {
 });
 
 router.put("/items/:id", (req, res) => {
-  db.purchaseditems.update(req.body, {
+  db.purchasedItems.update(req.body, {
     where: {
       id: req.params.id
     }
@@ -35,7 +35,7 @@ router.put("/items/:id", (req, res) => {
 });
 
 router.delete("/items", (req, res) => {
-  db.purchaseditems.destroy({
+  db.purchasedItems.destroy({
     where: {
       id: req.params.id
     }
