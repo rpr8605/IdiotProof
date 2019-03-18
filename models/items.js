@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let purchasedItems = sequelize.define("purchasedItems", {
+  let purchaseditems = sequelize.define("purchaseditems", {
     item_name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.BIGINT
     }
   });
-  return purchasedItems;
+  return purchaseditems;
 }
 
 
