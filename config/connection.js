@@ -1,6 +1,6 @@
 let Sequelize = require("sequelize");
 
-let sequelize = new Sequelize("purchasedItems_db", "root", "Adeyemi2", {
+let sequelize = new Sequelize("purchasedItems_db", "root", "trebor", {
   host: "localhost",
   port: 3306,
   dialect: "mysql",
