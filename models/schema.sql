@@ -10,6 +10,7 @@ expiration_date date not null,
 notes text,
 warranty_valid boolean default true,
 phone_number bigint(20),
+price decimal not null(9,2),
 createdAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 updatedAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
 primary key (id)

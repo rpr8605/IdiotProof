@@ -20,10 +20,11 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: true
     },
     phone_number: {
-      type: DataTypes.BIGINT
+      type: DataTypes.BIGINT, 
+    },
+    price:{
+      type:DataTypes.DECIMAL,
+      allowNull: false,
     }
   });
   return PurchasedItems;
-}
-
-
