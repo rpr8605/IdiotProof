@@ -204,14 +204,7 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 <!-- Display table Auto -->
 
@@ -221,20 +214,20 @@
 
     const newItem = {
       itemName: $("#name").val().trim(),
-      itemCategories: $("#categories").val().trim(),
-      BarcodeNumber: $("#barcode").val().trim(),
+      phoneNumber: $("#phone-number").val().trim(),
+      Expiration_date: $("#date").val().trim(),
       Renewal_Price: $("#renewal-price").val().trim(),
-      Expiration_date: $("#date").val().trim()
+      Notes: $("#notes").val().trim()
     }
 
     console.log(newItem)
 
     // Clear the form field
     $("#name").val("")
-    $("#categories").val("")
-    $("#barcode").val("")
-    $("#renewal-price").val("")
+    $("#phone-number").val("")
     $("#date").val("")
+    $("#price").val("")
+    $("#notes").val("")
 
   })
 </script>
@@ -263,12 +256,12 @@
         </div>
 
         <div class="md-form mb-5">
-          <input type="email" id="categories" class="form-control validate" placeholder="Categories">
+          <input type="email" id="categories" class="form-control validate" placeholder="Phone Number">
           <label data-error="wrong" data-success="right" for="categories"> </label>
         </div>
 
         <div class="md-form mb-5">
-          <input type="text" id="barcode" class="form-control validate" placeholder="Barcode #">
+          <input type="text" id="barcode" class="form-control validate" placeholder="Exp. Date (10/30/1999)">
           <label data-error="wrong" data-success="right" for="barcode"></label>
         </div>
 
@@ -279,7 +272,7 @@
         </div>
 
         <div class="md-form mb-5">
-          <input type="text" id="date" class="form-control validate" placeholder="Expiration date">
+          <input type="text" id="date" class="form-control validate" placeholder="Notes">
           <label data-error="wrong" data-success="right" for="date"></label>
         </div>
       </div>
