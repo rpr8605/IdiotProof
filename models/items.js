@@ -24,7 +24,9 @@ module.exports = function (sequelize, DataTypes) {
     },
     price:{
       type:DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: false
     }
   });
+
   return PurchasedItems;
+}
