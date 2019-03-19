@@ -34,7 +34,7 @@ router.put("/items/:id", (req, res) => {
   })
 });
 
-router.delete("/items", (req, res) => {
+router.delete("/items/:id", (req, res) => {
   db.purchasedItems.destroy({
     where: {
       id: req.params.id
