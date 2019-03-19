@@ -1,4 +1,4 @@
-Drop database if exists purchasedItems_db
+Drop database if exists purchasedItems_db;
 create database purchasedItems_db;
 use purchasedItems_db;
 

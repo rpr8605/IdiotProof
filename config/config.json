@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "trebor",
+    "password": "notlimah",
     "database": "purchasedItems_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "trebor",
+    "password": "notlimah",
     "database": "purchasedItems_db",
     "host": "localhost",
     "dialect": "mysql",
