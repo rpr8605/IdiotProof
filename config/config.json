@@ -1,14 +1,30 @@
 {
   "development": {
     "username": "root",
+
     "password": "notlimah",
+
+
+    "password": "1904W5th",
+
+    "password": "Linclia@4044",
+
+
     "database": "purchasedItems_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
+
     "password": "notlimah",
+
+
+    "password": "1904W5th",
+
+    "password": "Linclia@4044",
+
+
     "database": "purchasedItems_db",
     "host": "localhost",
     "dialect": "mysql",
