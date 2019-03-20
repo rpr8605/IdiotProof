@@ -21,9 +21,9 @@ body {
 #innerBody {
   align-content: center;
   margin-top:10px;
-  margin-right: 40px;
+  margin-right: 25px;
   margin-bottom: 10px;
-  margin-left: 40px;
+  margin-left: 25px;
   background-color: white;
   opacity: 1;
 }
@@ -45,35 +45,35 @@ body {
 .soonToExpire {
   width: 100%;
   border: double;
-  font-size: 40px;
+  font-size: 25px;
   background-color:white;
   font-weight: bold;
 }
 .electronics {
   width: 100%;
   border: double;
-  font-size: 40px;
+  font-size: 25px;
   background-color:white;
   font-weight: bold;
 }
 .auto {
   width: 100%;
   border: double;
-  font-size: 40px;
+  font-size: 25px;
   background-color:white;
   font-weight: bold;
 }
 .home {
   width: 100%;
   border: double;
-  font-size: 40px;
+  font-size: 25px;
   background-color:white;
   font-weight: bold;
 }
 .misc {
   width: 100%;
   border: double;
-  font-size: 40px;
+  font-size: 25px;
   background-color:white;
   font-weight: bold;
 }
