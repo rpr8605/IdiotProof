@@ -1,27 +1,33 @@
 $("button").on("click", function(e) {
   e.preventDefault();
+  var name = $('#add_item_name').val().trim();
+  var phoneNumber = $('#add_item_phone').val().trim();
+  var expirationDate = $('#add_item_expiration_date').val().trim();
+  var price = $('#add_item_price').val().trim();
+  var notes = $('#add_item_notes').val().trim();
+
+  /* eslint-disable camelcase */
   var newItem = {
-    itemName: $("#name")
-      .val()
-      .trim(),
-    category: $("#category")
-      .val()
-      .trim(),
-    expirationDate: $("#expirationdate")
-      .val()
-      .trim(),
-    warrantyValid: $("#warrantyvalid")
-      .val()
-      .trim(),
-    phoneNumber: $("#phonenumber")
-      .val()
-      .trim(),
-    note: $("#note")
-      .val()
-      .trim()
+    // Left hand side must match name of columns in database
+    item_name: name,
+    phoneNumber: phoneNumber,
+    expiration_date: expirationDate,
+    note: notes,
+    price: price,
+    // TODO: Correctly determine the category to add to
+    category: "expiresoon",
+    // TODO: Correctly determine if the warranty is valid
+    warrantyValid: true,
+
   };
+  /* eslint-enable camelcase */
 
   console.log(newItem);
+
+  $.post('/items', newItem).then((result) => {
+    console.log(result);
+    window.location.reload();
+  })
 
   // Clear the form field
   $("#name").val("");
