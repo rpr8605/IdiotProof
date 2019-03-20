@@ -45,35 +45,35 @@ body {
 .soonToExpire {
   width: 100%;
   border: double;
-  font-size: 1rem;
+  font-size: 40px;
   background-color:white;
   font-weight: bold;
 }
 .electronics {
   width: 100%;
   border: double;
-  font-size: 1rem;
+  font-size: 40px;
   background-color:white;
   font-weight: bold;
 }
 .auto {
   width: 100%;
   border: double;
-  font-size: 1rem;
+  font-size: 40px;
   background-color:white;
   font-weight: bold;
 }
 .home {
   width: 100%;
   border: double;
-  font-size: 1rem;
+  font-size: 40px;
   background-color:white;
   font-weight: bold;
 }
 .misc {
   width: 100%;
   border: double;
-  font-size: 1rem;
+  font-size: 40px;
   background-color:white;
   font-weight: bold;
 }
@@ -198,5 +198,7 @@ justify-content: center;
   width: 250px;
   border-radius: 50%;
 }
+.table {
+  width: 100%;
 }
 
