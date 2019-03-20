@@ -1,4 +1,4 @@
-$("button").on("click", function(e) {
+$("button").on("click", function (e) {
   e.preventDefault();
   var name = $('#add_item_name').val().trim();
   var phoneNumber = $('#add_item_phone').val().trim();
@@ -11,9 +11,9 @@ $("button").on("click", function(e) {
   var newItem = {
     // Left hand side must match name of columns in database
     item_name: name,
-    phoneNumber: phoneNumber,
+    phone_number: phoneNumber,
     expiration_date: expirationDate,
-    note: notes,    
+    notes: notes,
     price: price,
     // TODO: Correctly determine the category to add to
     category: category,
@@ -25,23 +25,23 @@ $("button").on("click", function(e) {
 
   console.log(newItem);
 
-  $.post('/items', newItem).then((result) => {
+  $.post("/items", newItem).then(function (result) {
     console.log(result);
     window.location.reload();
-  })
+  });
 
-   $('#add_item_name').val("")
-   $('#add_item_phone').val("")
-   $('#add_item_expiration_date').val("")
-   $('#add_item_price').val("")
-   $('#add_item_notes').val("")
-   $('#add_item_category').val("")
+  $('#add_item_name').val("")
+  $('#add_item_phone').val("")
+  $('#add_item_expiration_date').val("")
+  $('#add_item_price').val("")
+  $('#add_item_notes').val("")
+  $('#add_item_category').val("")
 
 });
 
 //Getting Item from Api Server
 
-$.get("/items", function(data) {
+$.get("/items", function (data) {
   console.log(data);
   for (var i = 0; i < data.length; i++) {
     var itemCategory = data[i].category.toLowerCase();
