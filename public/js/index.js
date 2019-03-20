@@ -37,7 +37,7 @@ $.get("/items", function(data) {
   console.log(data);
   for (var i = 0; i < data.length; i++) {
     var itemCategory = data[i].category.toLowerCase();
-    console.log(itemCategory)
+    console.log(itemCategory);
     selectCategory(data[i], itemCategory);
   }
 });
