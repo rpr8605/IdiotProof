@@ -5,15 +5,14 @@ let db = require("../models");
 
 router.get("/items", (req, res) => {
   db.purchasedItems.findAll({}).then(results => {
-    console.log("Hey there");
-    res.json(results);
+     res.json(results);
+     console.log(results)
   })
 });
 
 
 router.post("/items", (req, res) => {
   let newItem = req.body;
-
   db.purchasedItems.create(newItem).then(purchasedItems => {
     console.log(newItem);
     res.json(newItem);
