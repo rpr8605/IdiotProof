@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(routes);
 
-//require("./routes/apiRoutes")(app);
+
 
 // Set Handlebars.
 app.set('views', path.join(__dirname, 'views'));

@@ -20,8 +20,6 @@
     "sequelize": "^4.38.0",
 
     "twilio": "^3.29.2"
-=======
-    "twilio": "^3.29.1"
 
   },
   "devDependencies": {
