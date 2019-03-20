@@ -42,6 +42,10 @@ body {
   font-family: 'Rock Salt', cursive;
 
 }
+.btn {
+  margin-left: 10px;
+  padding-left: 10px;
+}
 .soonToExpire {
   width: 100%;
   border: double;
