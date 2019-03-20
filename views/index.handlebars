@@ -154,32 +154,6 @@
 <br>
 
 
-<!-- Display table Auto -->
-
-<script>
-  $("button").on("click", (e) => {
-    e.preventDefault()
-
-    const newItem = {
-      itemName: $("#name").val().trim(),
-      phoneNumber: $("#phone-number").val().trim(),
-      Expiration_date: $("#date").val().trim(),
-      Renewal_Price: $("#renewal-price").val().trim(),
-      Notes: $("#notes").val().trim()
-    }
-
-    console.log(newItem)
-
-    // Clear the form field
-    $("#name").val("")
-    $("#phone-number").val("")
-    $("#date").val("")
-    $("#price").val("")
-    $("#notes").val("")
-
-  })
-</script>
-
 
 </body>
 
@@ -206,23 +180,28 @@
 
         <div class="md-form mb-5">
           <input type="email" id="add_item_phone" class="form-control validate" placeholder="Phone Number">
-          <label data-error="wrong" data-success="right" for="categories"> </label>
+          <label data-error="wrong" data-success="right" for="phone"> </label>
         </div>
 
         <div class="md-form mb-5">
           <input type="text" id="add_item_expiration_date" class="form-control validate" placeholder="Exp. Date (10/30/1999)">
-          <label data-error="wrong" data-success="right" for="barcode"></label>
+          <label data-error="wrong" data-success="right" for="expiration_date"></label>
         </div>
 
 
         <div class="md-form mb-5">
-          <input type="text" id="add_item_price" class="form-control validate" placeholder="Renewal Price">
-          <label data-error="wrong" data-success="right" for="renewal-price"></label>
+          <input type="text" id="add_item_price" class="form-control validate" placeholder="Price">
+          <label data-error="wrong" data-success="right" for="price"></label>
         </div>
 
         <div class="md-form mb-5">
           <input type="text" id="add_item_notes" class="form-control validate" placeholder="Notes">
-          <label data-error="wrong" data-success="right" for="date"></label>
+          <label data-error="wrong" data-success="right" for="note"></label>
+        </div>
+
+        <div class="md-form mb-5">
+          <input type="text" id="add_item_category" class="form-control validate" placeholder="Category">
+          <label data-error="wrong" data-success="right" for="note"></label>
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
@@ -234,7 +213,8 @@
 </div>
 
 
-
+</form>
+</div>
 <div class="row team-info">
   <!-- Robert  Profile -->
   <div class="container bios">

@@ -5,6 +5,7 @@ $("button").on("click", function(e) {
   var expirationDate = $('#add_item_expiration_date').val().trim();
   var price = $('#add_item_price').val().trim();
   var notes = $('#add_item_notes').val().trim();
+  var category = $('#add_item_category').val().trim();
 
   /* eslint-disable camelcase */
   var newItem = {
@@ -12,10 +13,10 @@ $("button").on("click", function(e) {
     item_name: name,
     phoneNumber: phoneNumber,
     expiration_date: expirationDate,
-    note: notes,
+    note: notes,    
     price: price,
     // TODO: Correctly determine the category to add to
-    category: "expiresoon",
+    category: category,
     // TODO: Correctly determine if the warranty is valid
     warrantyValid: true,
 
@@ -29,12 +30,13 @@ $("button").on("click", function(e) {
     window.location.reload();
   })
 
-  // Clear the form field
-  $("#name").val("");
-  $("#categories").val("");
-  $("#barcode").val("");
-  $("#renewal-price").val("");
-  $("#date").val("");
+   $('#add_item_name').val("")
+   $('#add_item_phone').val("")
+   $('#add_item_expiration_date').val("")
+   $('#add_item_price').val("")
+   $('#add_item_notes').val("")
+   $('#add_item_category').val("")
+
 });
 
 //Getting Item from Api Server
