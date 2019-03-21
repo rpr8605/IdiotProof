@@ -2,7 +2,7 @@ let Sequelize = require("sequelize");
 
 let sequelize = new Sequelize("purchasedItems_db", "root", "notlimah", {
   host: "localhost",
-  port: 80,
+  port: 3306,
   dialect: "mysql",
   pool: {
     max: 5,
