@@ -1,6 +1,8 @@
 
 Welcome to Idiot Proof! Here you can store and track warranties. Select a time for us to remind you that your warranty is about to expire, even let us text you when it's getting close.
 
+https://salty-dawn-74206.herokuapp.com/
+
 ![Screenshot](https://github.com/TAADAO/IdiotProof/blob/master/public/images/readMeImg.jpg)
 
 Team Members:
